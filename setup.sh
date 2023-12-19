@@ -11,6 +11,7 @@
 # Screen sharing   - xdg-desktop-portal-hyprland
 # Automount USB    - udisks2
 # Screen locker    - swaylock
+# Screenshots      - grim / slurp / wl-clipboard
 
 # Package Manager  - paru
 echo "Update..."
@@ -28,7 +29,7 @@ cd ..
 rm -rf paru
 
 echo "Install dependencies..."
-sudo paru -S zsh swaylock thunar udisks2 foot wofi waybar hyprpaper hyprland dunst xdg-desktop-portal-hyprland
+sudo paru -S zsh swaylock thunar grim wl-clipboard slurp udisks2 foot wofi waybar hyprpaper hyprland dunst xdg-desktop-portal-hyprland
 cp -rf configs/* ~/.config/
 cp -rf homeConfigs/.* ~
 
