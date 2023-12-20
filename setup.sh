@@ -12,6 +12,7 @@
 # Automount USB    - udisks2
 # Screen locker    - swaylock
 # Screenshots      - grim / slurp / wl-clipboard
+# Editor           - nvim (neovim)
 
 # Package Manager  - paru
 echo "Update..."
@@ -29,7 +30,7 @@ cd ..
 rm -rf paru
 
 echo "Install dependencies..."
-sudo paru -S zsh swaylock thunar grim wl-clipboard slurp udisks2 foot wofi waybar hyprpaper hyprland dunst xdg-desktop-portal-hyprland
+sudo paru -S neovim zsh swaylock thunar grim wl-clipboard slurp udisks2 foot wofi waybar hyprpaper hyprland dunst xdg-desktop-portal-hyprland
 cp -rf configs/* ~/.config/
 cp -rf homeConfigs/.* ~
 
@@ -46,7 +47,6 @@ gsettings set org.gnome.desktop.interface icon-theme "Dracula"
 gsettings set org.gnome.desktop.interface cursor-theme "GoogleDot-Black"
 
 # Set ZSH as shell.
-if [ $SHELL != "/usr/bin/zsh" ]
-then
+if [ $SHELL != "/usr/bin/zsh" ]; then
 	chsh -s /usr/bin/zsh
 fi
