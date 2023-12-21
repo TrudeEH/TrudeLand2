@@ -12,6 +12,7 @@ git clone https://github.com/TrudeEH/dotfiles.git
 cd dotfiles
 ./setup.sh
 ```
+If you would like to change the configs later, I recommend forking the project.
 ## Update
 ```sh
 cd ~/dotfiles
