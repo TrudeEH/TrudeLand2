@@ -1,5 +1,5 @@
 # TrudeEH's Dotfiles
-
+## Screenshots
 ![Screenshot](./screenshots/1.png)
 ![Screenshot](./screenshots/2.png)
 ![Screenshot](./screenshots/3.png)
@@ -20,3 +20,15 @@ git reset --hard origin/master
 ./update_configs.sh
 ```
 If an update changes a dependency, run `setup.sh` again.
+## Components
+- **Terminal**: foot
+- **Window Manager**: hyprland
+- **Notifications**: dunst
+- **System bar**: waybar
+- **App launcher**: wofi
+- **Shell**: zsh
+- **Wallpaper Setter**: hyprpaper
+- **File manager**: thunar
+- **Screen locker**: swaylock
+- **Editor:** nvim (neovim)
+- **Package Manager**: paru
