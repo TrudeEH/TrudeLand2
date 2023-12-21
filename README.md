@@ -22,7 +22,9 @@ git fetch --all
 git reset --hard origin/master
 ./update_configs.sh
 ```
+If an update changes a dependency, run `setup.sh` again.
 ## Common issues
+**After updating any file under `dotfiles`, run `./update_configs.sh` to apply the changes.**
 - **Misconfigured monitors**
   - Edit: `~/dotfiles/configs/hypr/hyprland.conf`
   - Info: [Hyprland Wiki - Monitors](https://wiki.hyprland.org/Configuring/Monitors/)
@@ -30,7 +32,6 @@ git reset --hard origin/master
   - Edit: `~/dotfiles/configs/waybar/config`
   - Info: The CPU temp is read from `/sys/class/hwmon/hwmonX/temp1_input`. Change the 'X' value to match your CPU's sensor.
 
-If an update changes a dependency, run `setup.sh` again.
 ## Components
 - **Terminal**: foot
 - **Window Manager**: hyprland
