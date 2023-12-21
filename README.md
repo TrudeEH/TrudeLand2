@@ -10,6 +10,8 @@
 cd ~
 git clone https://github.com/TrudeEH/dotfiles.git
 cd dotfiles
+# Before runing the setup script, change your monitor settings at ~/dotfiles/configs/hypr/hyprland.conf
+# See https://wiki.hyprland.org/Configuring/Monitors/ for more info.
 ./setup.sh
 ```
 If you would like to change the configs later, I recommend forking the project.
@@ -20,6 +22,14 @@ git fetch --all
 git reset --hard origin/master
 ./update_configs.sh
 ```
+## Common issues
+- **Misconfigured monitors**
+  - Edit: `~/dotfiles/configs/hypr/hyprland.conf`
+  - Info: [Hyprland Wiki - Monitors](https://wiki.hyprland.org/Configuring/Monitors/)
+- **The system bar reports the wrong CPU temp**
+  - Edit: `~/dotfiles/configs/waybar/config`
+  - Info: The CPU temp is read from `/sys/class/hwmon/hwmonX/temp1_input`. Change the 'X' value to match your CPU's sensor.
+
 If an update changes a dependency, run `setup.sh` again.
 ## Components
 - **Terminal**: foot
