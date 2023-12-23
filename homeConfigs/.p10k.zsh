@@ -116,6 +116,7 @@
     # example               # example user-defined segment (see prompt_example function below)
   )
 
+
   # Defines character set used by powerlevel10k. It's best to let `p10k configure` set it for you.
   typeset -g POWERLEVEL9K_MODE=nerdfont-v3
   # When set to `moderate`, some icons will have an extra space after them. This is meant to avoid
@@ -1711,6 +1712,8 @@
 
 # Tell `p10k configure` which file it should overwrite.
 typeset -g POWERLEVEL9K_CONFIG_FILE=${${(%):-%x}:a}
+
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 (( ${#p10k_config_opts} )) && setopt ${p10k_config_opts[@]}
 'builtin' 'unset' 'p10k_config_opts'

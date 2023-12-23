@@ -30,7 +30,7 @@ cd ..
 rm -rf paru
 
 echo "Install dependencies..."
-sudo paru -S pacman-contrib neovim zsh swaylock thunar grim wl-clipboard slurp udisks2 foot wofi waybar hyprpaper hyprland dunst xdg-desktop-portal-hyprland
+sudo paru -S firefox pacman-contrib neovim zsh swaylock thunar grim wl-clipboard slurp udisks2 foot wofi waybar hyprpaper hyprland dunst xdg-desktop-portal-hyprland
 cp -rf configs/* ~/.config/
 cp -rf homeConfigs/.* ~
 
@@ -39,6 +39,9 @@ sudo systemctl start cronie
 sudo systemctl start cronie.service
 sudo systemctl enable cronie
 sudo systemctl enable cronie.service
+
+# Install p10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
 
 # GTK Theme, Cursor and Icons
 gsettings set org.gnome.desktop.interface gtk-theme "Dracula"
