@@ -30,7 +30,7 @@ cd ..
 rm -rf paru
 
 echo "Install dependencies..."
-sudo paru -S neovim zsh swaylock thunar grim wl-clipboard slurp udisks2 foot wofi waybar hyprpaper hyprland dunst xdg-desktop-portal-hyprland
+sudo paru -S pacman-contrib neovim zsh swaylock thunar grim wl-clipboard slurp udisks2 foot wofi waybar hyprpaper hyprland dunst xdg-desktop-portal-hyprland
 cp -rf configs/* ~/.config/
 cp -rf homeConfigs/.* ~
 
