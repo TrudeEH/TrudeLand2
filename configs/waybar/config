@@ -9,7 +9,7 @@
     "margin-left": 10,
     "margin-bottom": 0,
     // Choose the order of the modules
-    "modules-left": ["custom/power", "clock", "battery", "tray"],
+    "modules-left": ["custom/power", "clock", "backlight", "battery", "tray"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["wireplumber", "network", "cpu", "temperature", "memory"],
     // Modules configuration
