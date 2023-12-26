@@ -1,4 +1,5 @@
-echo "Update .config ..."
+echo
+echo "Updating .config ..."
 cp -rf configs/* ~/.config/
-echo "Update home configs..."
+echo "Updating home configs..."
 cp -rf homeConfigs/.* ~
