@@ -11,7 +11,7 @@
     // Choose the order of the modules
     "modules-left": ["custom/power", "clock", "backlight", "battery", "tray"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["wireplumber", "network", "cpu", "temperature", "memory"],
+    "modules-right": ["wireplumber", "network", "cpu", "memory", "custom/temperature-auto"],
     // Modules configuration
 	"custom/power": {
 	    "format": "󰣇",
@@ -115,19 +115,32 @@
   },
     "cpu": {
         "interval": 1,
-        "format": "{usage}% ",
+        "format": "{usage}% ",
         "tooltip": false
     },
     "memory": {
         "interval": 2,
-        "format": "{}% "
+        "format": "{}% "
+    },
+    "custom/temperature-auto": {
+        "exec": "$HOME/.config/waybar/scripts/temp.sh",
+        "restart-interval": 1,
     },
     "temperature": {
         // "thermal-zone": 2,
+        "hwmon-path": "/sys/class/hwmon/hwmon4/temp1_input",
+        "critical-threshold": 80,
+        "format-critical": "  {temperatureC}°C 󰈸",
+        "format": "  {temperatureC}°C {icon}",
+        "format-icons": ["󱃃", "󰔏"],
+        "interval": 1
+    },
+    "temperature#gpu": {
+        // "thermal-zone": 2,
         "hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
         "critical-threshold": 80,
-        "format-critical": "{temperatureC}°C 󰈸",
-        "format": "{temperatureC}°C {icon}",
+        "format-critical": "󰽉  {temperatureC}°C 󰈸",
+        "format": "󰽉  {temperatureC}°C {icon}",
         "format-icons": ["󱃃", "󰔏"],
         "interval": 1
     },
