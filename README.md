@@ -1,4 +1,4 @@
-# TrudeEH's Dotfiles
+# TrudeEH's Dotfiles for Hyprland
 ## Screenshots
 ![Screenshot](./screenshots/1.png)
 ![Screenshot](./screenshots/2.png)
